@@ -9,3 +9,22 @@
 6、库存预热--秒杀商品信息初始化到Redis库
 7、流量削峰--MQ异步下单
 8、身份拦截--登录过滤
+
+
+
+并发访问测试：
+1、登录
+   Post: http://192.168.1.5:8888/user/login
+   参数：mobile、password
+
+2、获取秒杀路径
+   Get： http://192.168.1.5:8888/seckill/path
+   参数：goodsId
+
+3、秒杀
+   POST：http://192.168.1.5:8888/seckill/{path}
+   参数：path
+
+4、查询秒杀结果
+   Get：http://192.168.1.5:8888/seckill/result
+   参数：goodsId

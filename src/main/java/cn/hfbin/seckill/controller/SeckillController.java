@@ -102,7 +102,7 @@ public class SeckillController implements InitializingBean {
         return "order_detail";
     }
 
-    @RequestMapping(value = "/{path}/seckill", method = RequestMethod.POST)
+    @RequestMapping(value = "/seckill/{path}", method = RequestMethod.POST)
     @ResponseBody
     public Result<Integer> list(Model model, @RequestParam("goodsId") long goodsId, @PathVariable("path") String path, HttpServletRequest request) {
 
